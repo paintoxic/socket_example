@@ -28,4 +28,11 @@ In this code have a client, that connect to socket in the default port (8080), a
     - node client.js
     - **CTRL + C** (To stop client)
 
+### Docker build images and run 
+
+    - Build image
+      - docker build -t socket_example
+
+    - Run container
+      - docker run -d -p 8080:8080 socket_example:latest --name socket_example
 
