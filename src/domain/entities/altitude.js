@@ -1,14 +1,18 @@
 class Altitude {
 
-    constructor(altitude) {
-        this.altitude = altitude
+    constructor(item) {
+        this.altitude = item.altitude
+        this.x = item.x
+        this.y = item.y
     }
 
 }
 
-const buildAltitude = (altitude) => {
+const buildAltitude = ({ altitude, x, y }) => {
     checkNumber(altitude)
-    const entity = new Altitude(altitude)
+    checkNumber(x)
+    checkNumber(y)
+    const entity = new Altitude({ altitude, x, y })
     return Object.freeze(entity)
 }
 
